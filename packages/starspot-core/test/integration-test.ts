@@ -95,7 +95,7 @@ describe("Integration: Route Dispatching", function() {
         index() {
           return new Promise(resolve => {
             let photo = this.createModel("photo") as Photo;
-            photo.id = 1234;
+            photo.id = "1234";
             photo.firstName = "Tom";
             photo.lastName = "Dale";
 
@@ -120,7 +120,7 @@ describe("Integration: Route Dispatching", function() {
       expect(response.toJSON()).to.deep.equal({
         data: {
           type: "photo",
-          id: 1234,
+          id: "1234",
           attributes: {
             firstName: "Tom",
             lastName: "Dale"
